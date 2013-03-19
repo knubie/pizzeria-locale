@@ -1,7 +1,7 @@
-# Front-end boilerplate
+# Pizzeria Locale
 
 ### Asset precompilation
-Use Foreman to compile the Sass and Coffeescript: `foreman start`. Tasks can be modified or augmented with in the Procfile.* 
+Use Foreman to compile the Slim, Sass and Coffeescript: `foreman start`. Tasks can be modified or augmented with in the Procfile.* 
 
 ### Sass
 

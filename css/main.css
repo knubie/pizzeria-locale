@@ -1,2 +1,110 @@
-#container {
+body {
+  text-align: center; }
+
+.container {
+  margin: 0 auto;
   width: 1000px; }
+
+.banner {
+  background-color: black;
+  opacity: 0.9;
+  position: relative;
+  width: 100px;
+  height: 100px; }
+
+.banner:before {
+  content: "";
+  width: 0;
+  height: 0;
+  position: absolute;
+  bottom: -8px;
+  left: 0;
+  border-top: 8px solid #6f6f6f;
+  border-right: 0 solid transparent;
+  border-left: 8px solid transparent; }
+
+.banner:after {
+  content: "";
+  width: 0;
+  height: 0;
+  position: absolute;
+  bottom: -8px;
+  right: 0;
+  border-top: 8px solid #6f6f6f;
+  border-right: 8px solid transparent;
+  border-left: 0 solid transparent; }
+
+#home #nav {
+  border-top: 2px solid #8f8f8f;
+  border-bottom: 2px solid #8f8f8f;
+  margin: 18px 0 25px 0; }
+  #home #nav li {
+    display: inline-block;
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #707070;
+    margin: 0 60px; }
+#home #hero {
+  position: relative; }
+  #home #hero #side-feature {
+    position: absolute;
+    top: 105px;
+    right: -12px; }
+#home #tweets {
+  font-size: 25px;
+  text-transform: uppercase;
+  vertical-align: text-top; }
+  #home #tweets #tweet {
+    font-size: 16px;
+    text-transform: none;
+    display: inline-block;
+    width: 715px; }
+
+#menu .title {
+  font-size: 40px;
+  text-transform: uppercase; }
+#menu .sub-title {
+  font-size: 23px; }
+#menu .section {
+  font-size: 0px;
+  letter-spacing: 0px;
+  word-spacing: 0px;
+  background-color: white;
+  -moz-box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.35);
+  -webkit-box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.35);
+  box-shadow: 1px 1px 6px rgba(0, 0, 0, 0.35);
+  filter: progid:DXImageTransform.Microsoft.dropshadow(OffX=1px, OffY=1px, Color='#000');
+  -ms-filter: "progid:DXImageTransform.Microsoft.dropshadow(OffX=1px, OffY=1px, Color='#000')"; }
+  #menu .section .photo {
+    display: inline-block;
+    background-color: red; }
+    @media only screen and (min-width: 1024px) and (max-width: 1343px) {
+      #menu .section .photo {
+        width: 250px;
+        height: 100%; } }
+    #menu .section .photo .banner {
+      margin-left: -8px;
+      margin-top: 40px;
+      width: 266px;
+      font-size: 42px;
+      text-transform: uppercase;
+      color: #cccccc; }
+  #menu .section .right {
+    padding: 22px;
+    display: inline-block; }
+    @media only screen and (min-width: 1024px) and (max-width: 1343px) {
+      #menu .section .right {
+        width: 750px; } }
+    #menu .section .right .heading {
+      font-size: 16px; }
+    #menu .section .right .divider {
+      border-bottom: 1px solid #cfcfcf;
+      margin: 23px 0; }
+    #menu .section .right .item .name {
+      font-size: 19px;
+      color: #252525;
+      text-transform: uppercase; }
+    #menu .section .right .item .ingredients {
+      font-size: 15px;
+      font-style: italic;
+      color: #898989; }
