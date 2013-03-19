@@ -8,8 +8,8 @@ html
     meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" name="viewport"
     link href="css/reset.css" rel="stylesheet"
     link href="css/main.css" rel="stylesheet"
-    script src="js/vendor/zepto.min.js" type="text/javascript"
-    script src="js/vendor/mustache.js" type="text/javascript"
+    script src="js/vendor/jquery.js" type="text/javascript"
+    script src="js/vendor/slides.js" type="text/javascript"
     script src="js/vendor/hisrc.js" type="text/javascript"
     script src="js/main.js" type="text/javascript"
   body
@@ -33,26 +33,93 @@ html
             | #tgif Great day for an Italian lunch. Two hours long and includes some vino. Reminder, we don't close on Fridays open from 11:30 till close. pic.twitter.com/IAnhVJ4a  -  (1 day ago)
     .page#menu
       .container
-        .title
-          | menu
+        .title menu
         .sub-title
           | Pick one of our favorite classics or build your own, starting with house-made hand-streched dough or an arugula base and then top with exceptional ingredients.
-        | {{#menu}}
-        .section
+        .section#neapolitan
           .photo
             | &nbsp;
             .banner
-              | {{banner}}
+              | neapolitan classics
           .right
-            .description {{description}}
+            .description
+              | Pizza known for being topped with just the right amount of each ingredient, 
+              | with a base of only tomato sauce, only mozzarella, or both.
             .divider
-            | {{#items}}
-            .item
-              .name {{name}}
-              .ingredients {{ingredients}}
-            | {{/items}}
-        | {{/menu}}
+            .items
+              .item
+                .name margherita
+                .ingredients tomatoes / mozzarella / basil
+              .item
+                .name maiale
+                .ingredients tomatoes / mozzarella / parmigiano / reggiano / prosciutto crudo / arugula
+              .item
+                .name marinara
+                .ingredients tomatoes / garlic / oregano
+              .item
+                .name bianca
+                .ingredients mozzarella / pecorino / garlic / spigarello / sausage
+              .item
+                .name mais
+                .ingredients mozzarella / sweet corn / creme fraiche / prosciutto cotto
+              .item
+                .name campagnola
+                .ingredients tomatoes / anchovies / capers / olives / garlic
+        .section#american
+          .photo
+            | &nbsp;
+            .banner
+              | american classics
+          .right
+            .description
+              | These flavorful pizzas are the topping combinations that are familiar to most, 
+              | on a base of both tomato sauce and mozzarella.
+            .divider
+            .items
+              .item
+                .name cheese
+                .ingredients tomato sauce / mozzarella
+              .item
+                .name pepperoni
+                .ingredients tomato sauce / mozzarella / pepperoni sausage
+              .item
+                .name veggie
+                .ingredients tomato sauce / mozzarella / mushroom / red onion / tomato / green pepper / olive
+              .item
+                .name supreme
+                .ingredients tomato sauce / pepperoni / sausage / mushroom / red onion / green pepper
+        .section#create-your-own
+          .photo
+            | &nbsp;
+            .banner
+              | create your own
+          .right
+            .one
+            .divider
+            .two
+        .section#drinks
+          .photo
+            | &nbsp;
+            .banner
+              | drinks
+          .right
 
     .page#inspiration
+      .container
+        .title inspiration
+        #slides
+          img.slidesjs-previous.slidesjs-navigation src="img/prev.png" alt="prev"
+          img.slidesjs-next.slidesjs-navigation src="img/next.png" alt="next"
+          img src="img/slides/1.jpg"
+          img src="img/slides/2.jpg"
+          img src="img/slides/3.jpg"
+          img src="img/slides/4.jpg"
+          img src="img/slides/5.jpg"
+          img src="img/slides/6.jpg"
+          img src="img/slides/7.jpg"
     .page#about
+      .container
+        .title about
     .page#locations
+      .container
+        .title locations

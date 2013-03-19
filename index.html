@@ -8,8 +8,8 @@
     <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" name="viewport" />
     <link href="css/reset.css" rel="stylesheet" />
     <link href="css/main.css" rel="stylesheet" />
-    <script src="js/vendor/zepto.min.js" type="text/javascript"></script>
-    <script src="js/vendor/mustache.js" type="text/javascript"></script>
+    <script src="js/vendor/jquery.js" type="text/javascript"></script>
+    <script src="js/vendor/slides.js" type="text/javascript"></script>
     <script src="js/vendor/hisrc.js" type="text/javascript"></script>
     <script src="js/main.js" type="text/javascript"></script>
   </head>
@@ -37,19 +37,100 @@
     <div class="page" id="menu">
       <div class="container">
         <div class="title">menu</div>
-        <div class="sub-title">Pick one of our favorite classics or build your own, starting with house-made hand-streched dough or an arugula base and then top with exceptional ingredients.</div>{{#menu}}<div class="section">
-          <div class="photo">&nbsp;<div class="banner">{{banner}}</div>
+        <div class="sub-title">Pick one of our favorite classics or build your own, starting with house-made hand-streched dough or an arugula base and then top with exceptional ingredients.</div>
+        <div class="section" id="neapolitan">
+          <div class="photo">&nbsp;<div class="banner">neapolitan classics</div>
           </div>
           <div class="right">
-            <div class="description">{{description}}</div>
-            <div class="divider"></div>{{#items}}<div class="item">
-              <div class="name">{{name}}</div>
-              <div class="ingredients">{{ingredients}}</div>
-            </div>{{/items}}</div>
-        </div>{{/menu}}</div>
+            <div class="description">Pizza known for being topped with just the right amount of each ingredient, with a base of only tomato sauce, only mozzarella, or both.</div>
+            <div class="divider"></div>
+            <div class="items">
+              <div class="item">
+                <div class="name">margherita</div>
+                <div class="ingredients">tomatoes / mozzarella / basil</div>
+              </div>
+              <div class="item">
+                <div class="name">maiale</div>
+                <div class="ingredients">tomatoes / mozzarella / parmigiano / reggiano / prosciutto crudo / arugula</div>
+              </div>
+              <div class="item">
+                <div class="name">marinara</div>
+                <div class="ingredients">tomatoes / garlic / oregano</div>
+              </div>
+              <div class="item">
+                <div class="name">bianca</div>
+                <div class="ingredients">mozzarella / pecorino / garlic / spigarello / sausage</div>
+              </div>
+              <div class="item">
+                <div class="name">mais</div>
+                <div class="ingredients">mozzarella / sweet corn / creme fraiche / prosciutto cotto</div>
+              </div>
+              <div class="item">
+                <div class="name">campagnola</div>
+                <div class="ingredients">tomatoes / anchovies / capers / olives / garlic</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section" id="american">
+          <div class="photo">&nbsp;<div class="banner">american classics</div>
+          </div>
+          <div class="right">
+            <div class="description">These flavorful pizzas are the topping combinations that are familiar to most, on a base of both tomato sauce and mozzarella.</div>
+            <div class="divider"></div>
+            <div class="items">
+              <div class="item">
+                <div class="name">cheese</div>
+                <div class="ingredients">tomato sauce / mozzarella</div>
+              </div>
+              <div class="item">
+                <div class="name">pepperoni</div>
+                <div class="ingredients">tomato sauce / mozzarella / pepperoni sausage</div>
+              </div>
+              <div class="item">
+                <div class="name">veggie</div>
+                <div class="ingredients">tomato sauce / mozzarella / mushroom / red onion / tomato / green pepper / olive</div>
+              </div>
+              <div class="item">
+                <div class="name">supreme</div>
+                <div class="ingredients">tomato sauce / pepperoni / sausage / mushroom / red onion / green pepper</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="section" id="create-your-own">
+          <div class="photo">&nbsp;<div class="banner">create your own</div>
+          </div>
+          <div class="right">
+            <div class="one"></div>
+            <div class="divider"></div>
+            <div class="two"></div>
+          </div>
+        </div>
+        <div class="section" id="drinks">
+          <div class="photo">&nbsp;<div class="banner">drinks</div>
+          </div>
+          <div class="right"></div>
+        </div>
+      </div>
     </div>
-    <div class="page" id="inspiration"></div>
-    <div class="page" id="about"></div>
-    <div class="page" id="locations"></div>
+    <div class="page" id="inspiration">
+      <div class="container">
+        <div class="title">inspiration</div>
+        <div id="slides">
+          <img alt="prev" class="slidesjs-previous slidesjs-navigation" src="img/prev.png" /><img alt="next" class="slidesjs-next slidesjs-navigation" src="img/next.png" /><img src="img/slides/1.jpg" /><img src="img/slides/2.jpg" /><img src="img/slides/3.jpg" /><img src="img/slides/4.jpg" /><img src="img/slides/5.jpg" /><img src="img/slides/6.jpg" /><img src="img/slides/7.jpg" />
+        </div>
+      </div>
+    </div>
+    <div class="page" id="about">
+      <div class="container">
+        <div class="title">about</div>
+      </div>
+    </div>
+    <div class="page" id="locations">
+      <div class="container">
+        <div class="title">locations</div>
+      </div>
+    </div>
   </body>
 </html>

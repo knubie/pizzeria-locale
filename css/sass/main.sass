@@ -35,6 +35,10 @@ body
   border-right: 8px solid transparent
   border-left: 0 solid transparent
 
+.page
+  .title
+    font-size: 40px
+    text-transform: uppercase
 #home
   background-image: url(../img/textures/home.jpg)
   #nav
@@ -66,11 +70,9 @@ body
 
 #menu
   background-image: url(../img/textures/menu.jpg)
-  .title
-    font-size: 40px
-    text-transform: uppercase
   .sub-title
     font-size: 23px
+    text-transform: uppercase
   .section
     background-color: #FFF
     margin-bottom: 17px
@@ -94,6 +96,11 @@ body
     .right
       padding: 22px
       margin-left: 250px
+      // Remove spaces between child inline-blocks
+      font-size: 0px
+      letter-spacing: 0px
+      word-spacing: 0px
+      //
       +tablet-landscape
         width: 750px
       .description
@@ -115,3 +122,36 @@ body
           font-size: 15px
           font-style: italic
           color: #898989
+
+#inspiration
+  background-image: url(../img/textures/inspiration.jpg)
+  .slidesjs-previous, .slidesjs-next
+    position: absolute
+    top: 260px
+    z-index: 99
+  .slidesjs-previous:hover, .slidesjs-next:hover
+    cursor: pointer
+  .slidesjs-previous
+    left: 30px
+  .slidesjs-next
+    right: 30px
+  #slides
+    position: relative
+    ul.slidesjs-pagination
+      font-size: 0px
+      letter-spacing: 0px
+      word-spacing: 0px
+      li.slidesjs-pagination-item
+        display: inline-block
+        margin: 0 4px
+        a
+          background-image: url(../img/slide-dots.png)
+          display: inline-block
+          height: 12px
+          width: 12px
+        a.active, a:hover
+          background-position: 0 -12px
+#about
+  background-image: url(../img/textures/about.jpg)
+#locations
+  background-image: url(../img/textures/locations.jpg)

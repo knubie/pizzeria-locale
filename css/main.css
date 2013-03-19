@@ -34,6 +34,10 @@ body {
   border-right: 8px solid transparent;
   border-left: 0 solid transparent; }
 
+.page .title {
+  font-size: 40px;
+  text-transform: uppercase; }
+
 #home {
   background-image: url(../img/textures/home.jpg); }
   #home #nav {
@@ -64,11 +68,9 @@ body {
 
 #menu {
   background-image: url(../img/textures/menu.jpg); }
-  #menu .title {
-    font-size: 40px;
-    text-transform: uppercase; }
   #menu .sub-title {
-    font-size: 23px; }
+    font-size: 23px;
+    text-transform: uppercase; }
   #menu .section {
     background-color: white;
     margin-bottom: 17px;
@@ -96,7 +98,10 @@ body {
         color: #cccccc; }
     #menu .section .right {
       padding: 22px;
-      margin-left: 250px; }
+      margin-left: 250px;
+      font-size: 0px;
+      letter-spacing: 0px;
+      word-spacing: 0px; }
       @media only screen and (min-width: 1024px) and (max-width: 1343px) {
         #menu .section .right {
           width: 750px; } }
@@ -119,3 +124,38 @@ body {
           font-size: 15px;
           font-style: italic;
           color: #898989; }
+
+#inspiration {
+  background-image: url(../img/textures/inspiration.jpg); }
+  #inspiration .slidesjs-previous, #inspiration .slidesjs-next {
+    position: absolute;
+    top: 260px;
+    z-index: 99; }
+  #inspiration .slidesjs-previous:hover, #inspiration .slidesjs-next:hover {
+    cursor: pointer; }
+  #inspiration .slidesjs-previous {
+    left: 30px; }
+  #inspiration .slidesjs-next {
+    right: 30px; }
+  #inspiration #slides {
+    position: relative; }
+    #inspiration #slides ul.slidesjs-pagination {
+      font-size: 0px;
+      letter-spacing: 0px;
+      word-spacing: 0px; }
+      #inspiration #slides ul.slidesjs-pagination li.slidesjs-pagination-item {
+        display: inline-block;
+        margin: 0 4px; }
+        #inspiration #slides ul.slidesjs-pagination li.slidesjs-pagination-item a {
+          background-image: url(../img/slide-dots.png);
+          display: inline-block;
+          height: 12px;
+          width: 12px; }
+        #inspiration #slides ul.slidesjs-pagination li.slidesjs-pagination-item a.active, #inspiration #slides ul.slidesjs-pagination li.slidesjs-pagination-item a:hover {
+          background-position: 0 -12px; }
+
+#about {
+  background-image: url(../img/textures/about.jpg); }
+
+#locations {
+  background-image: url(../img/textures/locations.jpg); }
