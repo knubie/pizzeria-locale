@@ -34,6 +34,24 @@
               ingredients: 'tomatoes / anchovies / capers / olives / garlic'
             }
           ]
+        }, {
+          banner: 'american classics',
+          description: 'These flavorful pizzas are the topping combinations that are familiar to most, on a base of both tomato sauce and mozzarella.',
+          items: [
+            {
+              name: 'cheese',
+              ingredients: 'tomato sauce / mozzarella'
+            }, {
+              name: 'pepperoni',
+              ingredients: 'tomato sauce / mozzarella / pepperoni sausage'
+            }, {
+              name: 'veggie',
+              ingredients: 'tomato sauce / mozzarella / mushroom / red onion / tomato / green pepper / olive'
+            }, {
+              name: 'supreme',
+              ingredients: 'tomato sauce / pepperoni / sausage / mushroom / red onion / green pepper'
+            }
+          ]
         }
       ]
     };

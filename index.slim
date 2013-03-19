@@ -37,7 +37,6 @@ html
           | menu
         .sub-title
           | Pick one of our favorite classics or build your own, starting with house-made hand-streched dough or an arugula base and then top with exceptional ingredients.
-
         | {{#menu}}
         .section
           .photo
@@ -45,36 +44,15 @@ html
             .banner
               | {{banner}}
           .right
-            .heading
-              | {{description}}
+            .description {{description}}
             .divider
             | {{#items}}
             .item
-              .name
-                | {{name}}
-              .ingredients
-                | {{ingredients}}
+              .name {{name}}
+              .ingredients {{ingredients}}
             | {{/items}}
         | {{/menu}}
 
-        /.section#neapolitan
-          /.photo
-            /| &nbsp;
-            /.banner
-              /| {{menu.neapolitan.banner}}
-              //| neapolitan classics
-          /.right
-            /.heading
-              /| Pizza known for being topped with just the right amount of each ingredient, with a base of only tomato sauce, only mozzarella, or both. .section#american
-            /.divider
-            /.item
-              /.head margherita
-              /.sub tomatoes / mozzerella / basil
-            /.item
-              /.head maiale
-              /.sub tomatoes / mozzerella / parmigiano / reggiano / prosciutto crudo / arugula
-        /.section#create-your-own
-        /.section#drinks
     .page#inspiration
     .page#about
     .page#locations
