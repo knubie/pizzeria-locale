@@ -11,13 +11,16 @@ html
     link href="http://vjs.zencdn.net/c/video-js.css" rel="stylesheet"
     script src="http://vjs.zencdn.net/c/video.js"
     script src="js/vendor/jquery.js" type="text/javascript"
+    script src="js/vendor/lazyload.js" type="text/javascript"
     script src="js/vendor/slides.js" type="text/javascript"
     script src="js/vendor/hisrc.js" type="text/javascript"
     script src="js/main.js" type="text/javascript"
   body
+    #sticky-nav
+      .container
     .page#home
       .container
-        img src="img/logo.png" alt="Pizzeria Locale"
+        img src="img/logo.png" width="179" height="180" alt="Pizzeria Locale"
         ul#nav
           li menu
           li inspiration
@@ -27,10 +30,10 @@ html
           li facebook
 
         #hero
-          img src="img/hero.jpg" alt=""
+          img src="img/hero.jpg" width="1000" alt=""
           img#side-feature src="img/side-feature.png" alt=""
         #tweets
-          latest tweet:
+          #head latest tweet:
           #tweet
             | #tgif Great day for an Italian lunch. Two hours long and includes some vino. Reminder, we don't close on Fridays open from 11:30 till close. pic.twitter.com/IAnhVJ4a  -  (1 day ago)
     .page#menu
@@ -97,15 +100,58 @@ html
               | create your own
           .right
             .one
+              .step
+                | choose your base
+              .item
+                .name red
+                .ingredients tomatoes / mozzarella
+              .item
+                .name white
+                .ingredients mozzarella
+              .item
+                .name arugala
+                .ingredients salad
             .divider
             .two
+              .step
+                | choose your toppings
+              .item
+                .ingredients
+                  p cherry tomatoes
+                  p mushrooms
+                  p onions
+                  p red onions
+                  p olives
+                  p peppers
+                  p green peppers
+                  p arugula
+              .item
+                .ingredients
+                  p artichokes
+                  p corn
+                  p roasted vegetables
+                  p basil
+                  p rapini
+                  p mozzarella
+                  p gorgonzola
+                  p parmigiano reggiano
+              .item
+                .ingredients
+                  p prosciutto cotto
+                  p prosciutto di parma
+                  p pork sausage
+                  p pancetta
+                  p brown anchovies
+                  p tuna
+                  p pepperoni
+                  p pork meatballs
+
         .section#drinks
           .photo
             | &nbsp;
             .banner
               | drinks
           .right
-
     .page#inspiration
       .container
         .title inspiration
@@ -137,6 +183,44 @@ html
             source src="movie.mp4" type="video/mp4"
             source src="movie.ogg" type="video/ogg"
             | Your browser does not support embedded video.
+        #second
+          .aside
+            .headline lachlan mackinnon-patterson
+            .divider
+            .body
+              | Lachlan has followed his passion for cooking from his start 
+              | in Missouri to some of the best restaurants in Europe – 
+              | eventually landing at the French Laundry in Napa Valley. 
+              | He joined Bobby in Boulder in 2003 to pursue their vision 
+              | of opening Frasca, a neighborhood restaurant reminiscent 
+              | of the frascas they had visited in Italy. Continuing to 
+              | explore these Italian traditions and cuisine, they opened 
+              | Pizzeria Locale in 2011.
+          img src="img/about-second.jpg" alt="Lachlan Mackinnon-Patterson"
+        #third
+          .aside
+            .headline bobby stuckey
+            .divider
+            .body
+              | Bobby began his career in Arizona, moving to Aspen in 1995 
+              | to join the staff of The Little Nell as sommelier. Five years 
+              | later he joined world-renowned chef Thomas Keller at The 
+              | French Laundry. There he received The James Beard Foundation's 
+              | "Outstanding Wine Service" Award and San Francisco 
+              | Magazine’s recognition as "Wine Director of the Year".
+          img src="img/about-third.jpg" alt="Bobby Stuckey"
     .page#locations
       .container
         .title locations
+        .location#denver
+          img src="img/location-denver.jpg" alt="Denver"
+          .aside
+            .banner Contemporary Neapolitan quick-serve
+            .left
+            .right
+        .location#boulder
+          img src="img/location-boulder.jpg" alt="Denver"
+          .aside
+            .banner The Original full-service pizza restaurant
+            .left
+            .right

@@ -2,10 +2,27 @@
 (function() {
 
   $(function() {
+    $('img').attr('data-original', function() {
+      return $(this).attr('src');
+    });
     $('img').attr('data-1x', function() {
       return $(this).attr('src');
     }).attr('data-2x', function() {
       return $(this).attr('src').replace('.', '@2x.');
+    }).attr('src', 'img/placeholder.png');
+    $('img').hisrc();
+    $('#nav').clone().attr('id', 'nav-two').appendTo('#sticky-nav > .container');
+    $(document).scroll(function() {
+      if ($(document).scrollTop() >= $('#nav').offset().top) {
+        return $('#sticky-nav').show();
+      } else {
+        return $('#sticky-nav').hide();
+      }
+    });
+    $('#nav > li, #nav-two > li').click(function() {
+      return $('html, body').animate({
+        scrollTop: $("#" + ($(this).html())).offset().top
+      });
     });
     return $('#slides').slidesjs({
       width: 1000,

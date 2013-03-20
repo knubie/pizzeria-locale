@@ -1,5 +1,38 @@
+@font-face {
+  font-family: TradeGothicCondensed;
+  src: url("fonts/TradeGothicLTStd-BdCn20.otf") format("opentype"); }
+
+@font-face {
+  font-family: TradeGothic;
+  src: url("fonts/TradeGothicLTStd-Bold.otf") format("opentype"); }
+
 body {
-  text-align: center; }
+  text-align: center;
+  -webkit-font-smoothing: antialiased;
+  font-family: TradeGothicCondensed, Helvetica, Sans-serif; }
+
+#sticky-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: none;
+  z-index: 100;
+  text-align: center;
+  width: 100%; }
+  #sticky-nav #nav-two {
+    border-top: 2px solid #8f8f8f;
+    border-bottom: 2px solid #8f8f8f;
+    background-color: white;
+    margin: 0 auto;
+    padding: 8px 0 0 0; }
+    #sticky-nav #nav-two li {
+      display: inline-block;
+      font-size: 24px;
+      text-transform: uppercase;
+      color: #707070;
+      margin: 0 60px; }
+    #sticky-nav #nav-two li:hover {
+      cursor: pointer; }
 
 .container {
   margin: 0 auto;
@@ -9,8 +42,8 @@ body {
   background-color: black;
   opacity: 0.9;
   position: relative;
-  width: 100px;
-  height: 100px; }
+  text-transform: uppercase;
+  text-align: center; }
 
 .banner:before {
   content: "";
@@ -36,20 +69,24 @@ body {
 
 .page .title {
   font-size: 40px;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  padding-top: 65px; }
 
 #home {
   background-image: url(../img/textures/home.jpg); }
   #home #nav {
     border-top: 2px solid #8f8f8f;
     border-bottom: 2px solid #8f8f8f;
-    margin: 18px 0 25px 0; }
+    margin: 18px 0 25px 0;
+    padding: 8px 0 0 0; }
     #home #nav li {
       display: inline-block;
       font-size: 24px;
       text-transform: uppercase;
       color: #707070;
       margin: 0 60px; }
+    #home #nav li:hover {
+      cursor: pointer; }
   #home #hero {
     position: relative; }
     #home #hero #side-feature {
@@ -57,20 +94,26 @@ body {
       top: 105px;
       right: -12px; }
   #home #tweets {
-    font-size: 25px;
-    text-transform: uppercase;
-    vertical-align: text-top; }
+    padding: 24px 0 60px 0; }
+    #home #tweets #head {
+      font-size: 25px;
+      text-transform: uppercase;
+      vertical-align: text-top;
+      display: inline-block; }
     #home #tweets #tweet {
       font-size: 16px;
-      text-transform: none;
       display: inline-block;
-      width: 715px; }
+      vertical-align: text-top;
+      width: 715px;
+      color: #707070; }
 
 #menu {
   background-image: url(../img/textures/menu.jpg); }
   #menu .sub-title {
     font-size: 23px;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    width: 803px;
+    margin: 0 auto 10px auto; }
   #menu .section {
     background-color: white;
     margin-bottom: 17px;
@@ -90,8 +133,7 @@ body {
           width: 250px;
           height: 100%; } }
       #menu .section .photo .banner {
-        margin-left: -8px;
-        margin-top: 40px;
+        margin: 40px -8px 0 -8px;
         width: 266px;
         font-size: 42px;
         text-transform: uppercase;
@@ -108,14 +150,19 @@ body {
       #menu .section .right .description {
         font-size: 16px;
         color: #505050; }
+      #menu .section .right .step {
+        font-size: 19px;
+        color: #252525;
+        text-transform: uppercase;
+        margin-bottom: 15px; }
       #menu .section .right .divider {
         border-bottom: 1px solid #cfcfcf;
         margin: 23px 0; }
       #menu .section .right .item {
         display: inline-block;
         vertical-align: text-top;
-        width: 235px;
-        margin-bottom: 40px; }
+        width: 206px;
+        margin: 0 14px 40px 14px; }
         #menu .section .right .item .name {
           font-size: 19px;
           color: #252525;
@@ -175,12 +222,48 @@ body {
       line-height: 27px;
       font-family: Georgia, Serif; }
   #about #first {
-    position: relative; }
+    position: relative;
+    margin-bottom: 12px; }
     #about #first .aside {
       width: 240px;
       left: 0; }
     #about #first video {
       margin-left: 240px; }
+  #about #second, #about #third {
+    position: relative;
+    margin-bottom: 12px; }
+    #about #second .aside, #about #third .aside {
+      width: 500px;
+      right: 0; }
+    #about #second img, #about #third img {
+      margin-right: 500px; }
 
 #locations {
   background-image: url(../img/textures/locations.jpg); }
+  #locations .location {
+    position: relative;
+    margin-bottom: 16px; }
+    #locations .location img {
+      margin-right: 500px; }
+    #locations .location .aside {
+      position: absolute;
+      width: 500px;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      background-color: #1c1c1c;
+      color: #cccccc;
+      padding: 15px; }
+      #locations .location .aside .banner {
+        background-color: #cecece;
+        position: absolute;
+        top: 24px;
+        left: -8px;
+        width: 516px;
+        padding: 18px;
+        font-size: 23px;
+        color: black; }
+      #locations .location .aside .banner:before {
+        border-top: 8px solid #7c7c7c; }
+      #locations .location .aside .banner:after {
+        border-top: 8px solid #7c7c7c; }
