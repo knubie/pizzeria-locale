@@ -156,6 +156,31 @@ body {
 
 #about {
   background-image: url(../img/textures/about.jpg); }
+  #about .divider {
+    border-bottom: 1px solid #898989;
+    margin: 23px 0; }
+  #about .aside {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    background-color: #1c1c1c;
+    color: #cccccc;
+    padding: 15px; }
+    #about .aside .headline {
+      font-size: 23px;
+      text-transform: uppercase; }
+    #about .aside .body {
+      font-size: 14px;
+      text-align: center;
+      line-height: 27px;
+      font-family: Georgia, Serif; }
+  #about #first {
+    position: relative; }
+    #about #first .aside {
+      width: 240px;
+      left: 0; }
+    #about #first video {
+      margin-left: 240px; }
 
 #locations {
   background-image: url(../img/textures/locations.jpg); }

@@ -8,6 +8,8 @@ html
     meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" name="viewport"
     link href="css/reset.css" rel="stylesheet"
     link href="css/main.css" rel="stylesheet"
+    link href="http://vjs.zencdn.net/c/video-js.css" rel="stylesheet"
+    script src="http://vjs.zencdn.net/c/video.js"
     script src="js/vendor/jquery.js" type="text/javascript"
     script src="js/vendor/slides.js" type="text/javascript"
     script src="js/vendor/hisrc.js" type="text/javascript"
@@ -120,6 +122,21 @@ html
     .page#about
       .container
         .title about
+        #first
+          .aside
+            .headline The original Pizzeria Locale opened in Boulder in 2011.
+            .divider
+            .body
+              | It was the result of founders Lachlan Mackinnon-Patterson 
+              | and Bobby Stuckey’s culinary travels throughout Italy and 
+              | years of fine dining experience. Now, they're opening a 
+              | second Pizzeria Locale with a simplified menu and a 
+              | revolutionary oven, cooking pizzas to a blistered perfection 
+              | in under two minutes.
+          video width="760" height="457" controls=""
+            source src="movie.mp4" type="video/mp4"
+            source src="movie.ogg" type="video/ogg"
+            | Your browser does not support embedded video.
     .page#locations
       .container
         .title locations

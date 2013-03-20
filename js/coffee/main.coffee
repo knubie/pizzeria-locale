@@ -1,5 +1,5 @@
 $ ->
-  # Auto set up SRCs for HiRes.js
+  # Auto set up SRCs for HiSrc.js
   $('img').attr 'data-1x', ->
     $(@).attr 'src'
   .attr 'data-2x', ->
