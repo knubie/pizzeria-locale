@@ -39,7 +39,14 @@ body
 
 .container
   margin: 0 auto
-  width: 1000px
+  +tablet-landscape-and-above
+    width: 1000px
+  +tablet-portrait
+    width: 680px
+  +mobile-landscape
+    width: 400px
+  +mobile-portrait
+    width: 280px
 
 .banner
   background-color: #000
@@ -70,27 +77,46 @@ body
 
 .page
   .title
-    font-size: 40px
+    +tablet-landscape-and-above
+      font-size: 40px
+    +mobile-portrait
+      font-size: 24px
     text-transform: uppercase
     padding-top: 65px
 #home
   background-image: url(../img/textures/home.jpg)
+  #logo
+    +tablet-landscape-and-above
+      width: 180px
+      height: 180px
+    +mobile-portrait
+      width: 130px
+      height: 130px
   #nav
     border-top: 2px solid #8f8f8f
     border-bottom: 2px solid #8f8f8f
     margin: 18px 0 25px 0
     padding: 8px 0 0 0
     li
+      +tablet-landscape-and-above
+        font-size: 24px
+        margin: 0 60px
+      +mobile-portrait
+        font-size: 17px
       display: inline-block
-      font-size: 24px
       text-transform: uppercase
       color: #707070
-      margin: 0 60px
     li:hover
       cursor: pointer
 
   #hero
     position: relative
+    .hero-img
+      width: 100%
+      +tablet-landscape-and-above
+        height: 473px
+      +mobile-portrait
+        height: 225px
     #side-feature
       position: absolute
       top: 105px
@@ -98,15 +124,23 @@ body
   #tweets
     padding: 24px 0 60px 0
     #head
-      font-size: 25px
+      +tablet-landscape-and-above
+        font-size: 25px
+      +mobile-portrait
+        font-size: 17px
       text-transform: uppercase
       vertical-align: text-top
       display: inline-block
     #tweet
-      font-size: 16px
+      +tablet-landscape-and-above
+        font-size: 16px
+        width: 715px
+      +mobile-portrait
+        font-size: 12px
+        width: 180px
+      text-align: left
       display: inline-block
       vertical-align: text-top
-      width: 715px
       color: #707070
 
 #menu
@@ -126,27 +160,44 @@ body
       top: 0
       bottom: 0
       background-color: red
-      +tablet-landscape
+      +tablet-landscape-and-above
         width: 250px
         height: 100%
+      +mobile-portrait
+        width: 0
+        height: 0
       .banner
-        margin: 40px -8px 0 -8px
-        width: 266px
-        font-size: 42px
+        +tablet-landscape-and-above
+          width: 266px
+          font-size: 42px
+          margin: 40px -8px 0 -8px
+        +mobile-portrait
+          width: 296px
+          font-size: 24px
+          padding: 15px 0
+          margin: 16px -8px 0 -8px
+        +mobile-portrait
         text-transform: uppercase
         color: #cccccc
     .right
-      padding: 22px
-      margin-left: 250px
+      +tablet-landscape-and-above
+        padding: 22px
+        margin-left: 250px
+        width: 750px
+      +mobile-portrait
+        padding: 105px 15px 15px 15px
       // Remove spaces between child inline-blocks
       font-size: 0px
       letter-spacing: 0px
       word-spacing: 0px
       //
-      +tablet-landscape
-        width: 750px
       .description
-        font-size: 16px
+        +tablet-landscape-and-above
+          font-size: 16px
+        +mobile-portrait
+          font-size: 12px
+          font-family: Georgia
+          line-height: 18px
         color: #505050
       .step
         font-size: 19px
@@ -198,42 +249,66 @@ body
           width: 12px
         a.active, a:hover
           background-position: 0 -12px
+
 #about
   background-image: url(../img/textures/about.jpg)
   .divider
     border-bottom: 1px solid #898989
-    margin: 23px 0
+    margin: 14px 0
   .aside
     position: absolute
     top: 0
     bottom: 0
     background-color: #1c1c1c
     color: #cccccc
-    padding: 15px
+    +mobile-portrait
+      width: 100%
     .headline
-      font-size: 23px
+      +tablet-landscape-and-above
+        font-size: 23px
+      +mobile-portrait
+        font-size: 20px
       text-transform: uppercase
     .body
-      font-size: 14px
+      +tablet-landscape-and-above
+        font-size: 14px
+        line-height: 27px
+      +mobile-portrait
+        font-size: 12px
+        line-height: 23px
       text-align: center
-      line-height: 27px
       font-family: Georgia, Serif
   #first
     position: relative
     margin-bottom: 12px
     .aside
-      width: 240px
-      left: 0
+      padding: 15px
+      +tablet-landscape-and-above
+        width: 240px
+        left: 0
     video
-      margin-left: 240px
+      +tablet-landscape-and-above
+        margin-left: 240px
   #second, #third
     position: relative
     margin-bottom: 12px
-    .aside
-      width: 500px
-      right: 0
     img
-      margin-right: 500px
+      +tablet-landscape-and-above
+        width: 500px
+        height: 290px
+        margin-right: 500px
+      +mobile-portrait
+        width: 280px
+        height: 180px
+        margin-bottom: 347px
+    .aside
+      padding: 15px
+      +tablet-landscape-and-above
+        width: 500px
+        right: 0
+      +mobile-portrait
+        width: 100%
+        top: 180px
 
 #locations
   background-image: url(../img/textures/locations.jpg)
