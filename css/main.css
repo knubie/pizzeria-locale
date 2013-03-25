@@ -78,15 +78,17 @@ body {
   border-right: 8px solid transparent;
   border-left: 0 solid transparent; }
 
-.page .title {
-  text-transform: uppercase;
-  padding-top: 65px; }
-  @media only screen and (min-width: 1024px) {
-    .page .title {
-      font-size: 40px; } }
-  @media only screen and (min-width: 320px) and (max-width: 567px) {
-    .page .title {
-      font-size: 24px; } }
+.page {
+  background-attachment: fixed; }
+  .page .title {
+    text-transform: uppercase;
+    padding-top: 65px; }
+    @media only screen and (min-width: 1024px) {
+      .page .title {
+        font-size: 40px; } }
+    @media only screen and (min-width: 320px) and (max-width: 567px) {
+      .page .title {
+        font-size: 24px; } }
 
 #home {
   background-image: url(../img/textures/home.jpg); }

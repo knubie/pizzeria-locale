@@ -34,3 +34,6 @@ $ ->
     navigation:
       active: false
       effect: 'slide'
+
+  skrollr.init
+    smoothScrolling: false

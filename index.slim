@@ -13,12 +13,13 @@ html
     script src="js/vendor/jquery.js" type="text/javascript"
     script src="js/vendor/lazyload.js" type="text/javascript"
     script src="js/vendor/slides.js" type="text/javascript"
+    script src="js/vendor/skrollr.min.js" type="text/javascript"
     script src="js/vendor/hisrc.js" type="text/javascript"
     script src="js/main.js" type="text/javascript"
   body
     #sticky-nav
       .container
-    .page#home
+    .page#home data-bottom-top="background-position: 0% 0%" data-top-bottom="background-position: 0% 200%"
       .container
         img#logo src="img/logo.png" alt="Pizzeria Locale"
         ul#nav
@@ -36,7 +37,7 @@ html
           #head latest tweet:
           #tweet
             | #tgif Great day for an Italian lunch. Two hours long and includes some vino. Reminder, we don't close on Fridays open from 11:30 till close. pic.twitter.com/IAnhVJ4a  -  (1 day ago)
-    .page#menu
+    .page#menu data-bottom-top="background-position: 0% 0%" data-top-bottom="background-position: 0% 200%"
       .container
         .title menu
         .sub-title
@@ -175,7 +176,7 @@ html
                 p lemonade
                 p apple juice
                 p eldorado water
-    .page#inspiration
+    .page#inspiration data-bottom-top="background-position: 0% 0%" data-top-bottom="background-position: 0% 200%"
       .container
         .title inspiration
         #slides
@@ -188,7 +189,7 @@ html
           img src="img/slides/5.jpg"
           img src="img/slides/6.jpg"
           img src="img/slides/7.jpg"
-    .page#about
+    .page#about data-bottom-top="background-position: 0% 0%" data-top-bottom="background-position: 0% 200%"
       .container
         .title about
         #first
@@ -232,7 +233,7 @@ html
               | "Outstanding Wine Service" Award and San Francisco 
               | Magazine’s recognition as "Wine Director of the Year".
           img src="img/about-third.jpg" alt="Bobby Stuckey"
-    .page#locations
+    .page#locations data-bottom-top="background-position: 0% 0%" data-top-bottom="background-position: 0% 200%"
       .container
         .title locations
         .location#denver

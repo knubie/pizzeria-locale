@@ -24,13 +24,16 @@
         scrollTop: $("#" + ($(this).html())).offset().top
       });
     });
-    return $('#slides').slidesjs({
+    $('#slides').slidesjs({
       width: 1000,
       height: 638,
       navigation: {
         active: false,
         effect: 'slide'
       }
+    });
+    return skrollr.init({
+      smoothScrolling: false
     });
   });
 
