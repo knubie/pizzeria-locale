@@ -2,6 +2,7 @@
 (function() {
 
   $(function() {
+    var Nav, Parallax, Slides, nav, parallax, slides;
     $('img').attr('data-original', function() {
       return $(this).attr('src');
     });
@@ -11,29 +12,64 @@
       return $(this).attr('src').replace('.', '@2x.');
     }).attr('src', 'img/placeholder.png');
     $('img').hisrc();
-    $('#nav').clone().attr('id', 'nav-two').appendTo('#sticky-nav > .container');
-    $(document).scroll(function() {
-      if ($(document).scrollTop() >= $('#nav').offset().top) {
-        return $('#sticky-nav').show();
-      } else {
-        return $('#sticky-nav').hide();
+    Nav = (function() {
+
+      function Nav() {
+        $('#nav').clone().attr('id', 'nav-two').appendTo('#sticky-nav > .container');
+        $('#nav > li, #nav-two > li').click(function() {
+          return $('html, body').animate({
+            scrollTop: $("#" + ($(this).html())).offset().top
+          });
+        });
       }
-    });
-    $('#nav > li, #nav-two > li').click(function() {
-      return $('html, body').animate({
-        scrollTop: $("#" + ($(this).html())).offset().top
-      });
-    });
-    $('#slides').slidesjs({
-      width: 1000,
-      height: 638,
-      navigation: {
-        active: false,
-        effect: 'slide'
+
+      Nav.prototype.scroll = function() {
+        if ($(document).scrollTop() >= $('#nav').offset().top) {
+          return $('#sticky-nav').show();
+        } else {
+          return $('#sticky-nav').hide();
+        }
+      };
+
+      return Nav;
+
+    })();
+    Slides = (function() {
+
+      function Slides(el) {
+        this.el = el;
+        this.el.slidesjs({
+          width: 1000,
+          height: 638,
+          navigation: {
+            active: false,
+            effect: 'slide'
+          }
+        });
       }
-    });
-    return skrollr.init({
-      smoothScrolling: false
+
+      return Slides;
+
+    })();
+    Parallax = (function() {
+
+      function Parallax(el) {
+        this.el = el;
+        this.el.attr('data-bottom-top', 'background-position: 0% 0%');
+        this.el.attr('data-top-bottom', 'background-position: 0% 200%');
+        skrollr.init({
+          smoothScrolling: false
+        });
+      }
+
+      return Parallax;
+
+    })();
+    parallax = new Parallax($('.page'));
+    slides = new Slides($('#slides'));
+    nav = new Nav;
+    return $(document).scroll(function() {
+      return nav.scroll();
     });
   });
 

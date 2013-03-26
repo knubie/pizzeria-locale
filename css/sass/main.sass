@@ -23,9 +23,8 @@ body
   text-align: center
   width: 100%
   #nav-two
-    border-top: 2px solid #8f8f8f
     border-bottom: 2px solid #8f8f8f
-    background-color: #FFF
+    background-color: rgba(255,255,255,0.9)
     margin: 0 auto
     padding: 8px 0 0 0
     li
@@ -33,7 +32,9 @@ body
       font-size: 24px
       text-transform: uppercase
       color: #707070
-      margin: 0 60px
+      margin: 0 59px
+      img
+        margin: 0 6px
     li:hover
       cursor: pointer
 
@@ -85,7 +86,7 @@ body
     text-transform: uppercase
     padding-top: 65px
 #home
-  background-image: url(../img/textures/home.jpg)
+  background-image: url(../img/bg/home.jpg)
   #logo
     +tablet-landscape-and-above
       width: 180px
@@ -99,14 +100,20 @@ body
     margin: 18px 0 25px 0
     padding: 8px 0 0 0
     li
+      vertical-align: middle
       +tablet-landscape-and-above
         font-size: 24px
-        margin: 0 60px
+        margin: 0 59px
+      +tablet-portrait
+        font-size: 20px
+        margin: 0 32px
       +mobile-portrait
         font-size: 17px
       display: inline-block
       text-transform: uppercase
       color: #707070
+      img
+        margin: -8px 6px 0 6px
     li:hover
       cursor: pointer
 
@@ -161,22 +168,32 @@ body
       top: 0
       bottom: 0
       background-color: red
+      background-position: center center
       +tablet-landscape-and-above
         width: 250px
         height: 100%
+      +tablet-portrait
+        width: 210px
       +mobile-portrait
         width: 0
         height: 0
       .banner
+        margin: 0 -8px
+        padding-top: 10px
         +tablet-landscape-and-above
           width: 266px
           font-size: 42px
-          margin: 40px -8px 0 -8px
+          margin-top: 40px
+        +tablet-portrait
+          width: 226px
+          font-size: 35px
+          line-height: 35px
+          margin-top: 35px
         +mobile-portrait
           width: 296px
           font-size: 24px
           padding: 15px 0
-          margin: 16px -8px 0 -8px
+          margin-top: 16px
         +mobile-portrait
         text-transform: uppercase
         color: #cccccc
@@ -185,6 +202,9 @@ body
         padding: 22px
         margin-left: 250px
         width: 750px
+      +tablet-portrait
+        margin-left: 210px
+        
       +mobile-portrait
         padding: 105px 15px 15px 15px
       // Remove spaces between child inline-blocks
@@ -221,6 +241,30 @@ body
           font-size: 15px
           font-style: italic
           color: #898989
+  #neapolitan
+    .photo
+      +retina
+        background-image: url(../img/menu/neapolitan@2x.jpg)
+      +non-retina
+        background-image: url(../img/menu/neapolitan.jpg)
+  #american
+    .photo
+      +retina
+        background-image: url(../img/menu/american@2x.jpg)
+      +non-retina
+        background-image: url(../img/menu/american.jpg)
+  #create-your-own
+    .photo
+      +retina
+        background-image: url(../img/menu/create-your-own@2x.jpg)
+      +non-retina
+        background-image: url(../img/menu/create-your-own.jpg)
+  #drinks
+    .photo
+      +retina
+        background-image: url(../img/menu/drinks@2x.jpg)
+      +non-retina
+        background-image: url(../img/menu/drinks.jpg)
 
 #inspiration
   background-image: url(../img/textures/inspiration.jpg)
