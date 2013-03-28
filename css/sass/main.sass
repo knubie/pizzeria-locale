@@ -24,19 +24,29 @@ body
   width: 100%
   #nav-two
     border-bottom: 2px solid #8f8f8f
-    background-color: rgba(255,255,255,0.9)
-    margin: 0 auto
     padding: 8px 0 0 0
+    background-color: rgba(255,255,255,0.9)
     li
+      vertical-align: middle
+      +tablet-landscape-and-above
+        font-size: 24px
+        margin: 0 59px
+      +tablet-portrait
+        font-size: 20px
+        margin: 0 32px
+      +mobile-portrait
+        font-size: 17px
+        margin: 0 4px
       display: inline-block
-      font-size: 24px
       text-transform: uppercase
       color: #707070
-      margin: 0 59px
       img
-        margin: 0 6px
+        margin: -4px 6px -4px 6px
     li:hover
       cursor: pointer
+    li.social
+      +mobile-portrait
+        display: none
 
 .container
   margin: 0 auto
@@ -81,6 +91,8 @@ body
   .title
     +tablet-landscape-and-above
       font-size: 40px
+    +tablet-portrait
+      font-size: 35px
     +mobile-portrait
       font-size: 24px
     text-transform: uppercase
@@ -109,13 +121,17 @@ body
         margin: 0 32px
       +mobile-portrait
         font-size: 17px
+        margin: 0 4px
       display: inline-block
       text-transform: uppercase
       color: #707070
       img
-        margin: -8px 6px 0 6px
+        margin: -4px 6px -4px 6px
     li:hover
       cursor: pointer
+    li.social
+      +mobile-portrait
+        display: none
 
   #hero
     position: relative
@@ -152,11 +168,14 @@ body
       color: #707070
 
 #menu
-  background-image: url(../img/textures/menu.jpg)
+  background-image: url(../img/bg/menu.jpg)
   .sub-title
-    font-size: 23px
     text-transform: uppercase
-    width: 803px
+    +tablet-landscape-and-above
+      width: 803px
+      font-size: 23px
+    +tablet-portrait
+      font-size: 19px
     margin: 0 auto 10px auto
   .section
     background-color: #FFF
@@ -267,7 +286,7 @@ body
         background-image: url(../img/menu/drinks.jpg)
 
 #inspiration
-  background-image: url(../img/textures/inspiration.jpg)
+  background-image: url(../img/bg/inspiration.jpg)
   .slidesjs-previous, .slidesjs-next
     position: absolute
     top: 260px
@@ -296,7 +315,7 @@ body
           background-position: 0 -12px
 
 #about
-  background-image: url(../img/textures/about.jpg)
+  background-image: url(../img/bg/about.jpg)
   .divider
     border-bottom: 1px solid #898989
     margin: 14px 0
@@ -337,11 +356,15 @@ body
   #second, #third
     position: relative
     margin-bottom: 12px
-    img
+    .image
       +tablet-landscape-and-above
         width: 500px
         height: 290px
         margin-right: 500px
+      +tablet-portrait
+        width: 340px
+        margin-right: 340px
+        height: 360px
       +mobile-portrait
         width: 280px
         height: 180px
@@ -351,26 +374,60 @@ body
       +tablet-landscape-and-above
         width: 500px
         right: 0
+      +tablet-portrait
+        width: 340px
+        right: 0
       +mobile-portrait
         width: 100%
         top: 180px
+  #second
+    .image
+      background-image: url(../img/about/lachlan.jpg)
+      background-position: center center
+  #third
+    .image
+      background-image: url(../img/about/bobbt.jpg)
+      background-position: center center
 
 #locations
-  background-image: url(../img/textures/locations.jpg)
+  background-image: url(../img/bg/locations.jpg)
   .location
     position: relative
     margin-bottom: 16px
     img
       margin-right: 500px
+      height: 300px
     .aside
       position: absolute
       width: 500px
+      height: 300px
       top: 0
       bottom: 0
       right: 0
       background-color: #1c1c1c
       color: #cccccc
-      padding: 15px
+      padding: 88px 15px 15px 15px
+      text-transform: uppercase
+      color: #cccccc
+      .left
+        display: inline-block
+        .top
+          font-size: 28px
+          line-height: 12px
+        .bottom
+          font-size: 64px
+        .address
+          font-size: 24px
+      .divider
+        display: inline-block
+        border-right: 1px solid #767676
+        height: 180px
+        margin: 0 15px
+      .right
+        width: 200px
+        display: inline-block
+        p
+          font-size: 18px
       .banner
         background-color: #cecece
         position: absolute

@@ -21,19 +21,32 @@ body {
   width: 100%; }
   #sticky-nav #nav-two {
     border-bottom: 2px solid #8f8f8f;
-    background-color: rgba(255, 255, 255, 0.9);
-    margin: 0 auto;
-    padding: 8px 0 0 0; }
+    padding: 8px 0 0 0;
+    background-color: rgba(255, 255, 255, 0.9); }
     #sticky-nav #nav-two li {
+      vertical-align: middle;
       display: inline-block;
-      font-size: 24px;
       text-transform: uppercase;
-      color: #707070;
-      margin: 0 59px; }
+      color: #707070; }
+      @media only screen and (min-width: 1024px) {
+        #sticky-nav #nav-two li {
+          font-size: 24px;
+          margin: 0 59px; } }
+      @media only screen and (min-width: 768px) and (max-width: 1023px) {
+        #sticky-nav #nav-two li {
+          font-size: 20px;
+          margin: 0 32px; } }
+      @media only screen and (min-width: 320px) and (max-width: 567px) {
+        #sticky-nav #nav-two li {
+          font-size: 17px;
+          margin: 0 4px; } }
       #sticky-nav #nav-two li img {
-        margin: 0 6px; }
+        margin: -4px 6px -4px 6px; }
     #sticky-nav #nav-two li:hover {
       cursor: pointer; }
+    @media only screen and (min-width: 320px) and (max-width: 567px) {
+      #sticky-nav #nav-two li.social {
+        display: none; } }
 
 .container {
   margin: 0 auto; }
@@ -87,6 +100,9 @@ body {
     @media only screen and (min-width: 1024px) {
       .page .title {
         font-size: 40px; } }
+    @media only screen and (min-width: 768px) and (max-width: 1023px) {
+      .page .title {
+        font-size: 35px; } }
     @media only screen and (min-width: 320px) and (max-width: 567px) {
       .page .title {
         font-size: 24px; } }
@@ -121,11 +137,15 @@ body {
           margin: 0 32px; } }
       @media only screen and (min-width: 320px) and (max-width: 567px) {
         #home #nav li {
-          font-size: 17px; } }
+          font-size: 17px;
+          margin: 0 4px; } }
       #home #nav li img {
-        margin: -8px 6px 0 6px; }
+        margin: -4px 6px -4px 6px; }
     #home #nav li:hover {
       cursor: pointer; }
+    @media only screen and (min-width: 320px) and (max-width: 567px) {
+      #home #nav li.social {
+        display: none; } }
   #home #hero {
     position: relative; }
     #home #hero .hero-img {
@@ -167,12 +187,17 @@ body {
           width: 180px; } }
 
 #menu {
-  background-image: url(../img/textures/menu.jpg); }
+  background-image: url(../img/bg/menu.jpg); }
   #menu .sub-title {
-    font-size: 23px;
     text-transform: uppercase;
-    width: 803px;
     margin: 0 auto 10px auto; }
+    @media only screen and (min-width: 1024px) {
+      #menu .sub-title {
+        width: 803px;
+        font-size: 23px; } }
+    @media only screen and (min-width: 768px) and (max-width: 1023px) {
+      #menu .sub-title {
+        font-size: 19px; } }
   #menu .section {
     background-color: white;
     margin-bottom: 17px;
@@ -293,7 +318,7 @@ body {
       background-image: url(../img/menu/drinks.jpg); } }
 
 #inspiration {
-  background-image: url(../img/textures/inspiration.jpg); }
+  background-image: url(../img/bg/inspiration.jpg); }
   #inspiration .slidesjs-previous, #inspiration .slidesjs-next {
     position: absolute;
     top: 260px;
@@ -322,7 +347,7 @@ body {
           background-position: 0 -12px; }
 
 #about {
-  background-image: url(../img/textures/about.jpg); }
+  background-image: url(../img/bg/about.jpg); }
   #about .divider {
     border-bottom: 1px solid #898989;
     margin: 14px 0; }
@@ -370,12 +395,17 @@ body {
     position: relative;
     margin-bottom: 12px; }
     @media only screen and (min-width: 1024px) {
-      #about #second img, #about #third img {
+      #about #second .image, #about #third .image {
         width: 500px;
         height: 290px;
         margin-right: 500px; } }
+    @media only screen and (min-width: 768px) and (max-width: 1023px) {
+      #about #second .image, #about #third .image {
+        width: 340px;
+        margin-right: 340px;
+        height: 360px; } }
     @media only screen and (min-width: 320px) and (max-width: 567px) {
-      #about #second img, #about #third img {
+      #about #second .image, #about #third .image {
         width: 280px;
         height: 180px;
         margin-bottom: 347px; } }
@@ -385,27 +415,60 @@ body {
         #about #second .aside, #about #third .aside {
           width: 500px;
           right: 0; } }
+      @media only screen and (min-width: 768px) and (max-width: 1023px) {
+        #about #second .aside, #about #third .aside {
+          width: 340px;
+          right: 0; } }
       @media only screen and (min-width: 320px) and (max-width: 567px) {
         #about #second .aside, #about #third .aside {
           width: 100%;
           top: 180px; } }
+  #about #second .image {
+    background-image: url(../img/about/lachlan.jpg);
+    background-position: center center; }
+  #about #third .image {
+    background-image: url(../img/about/bobbt.jpg);
+    background-position: center center; }
 
 #locations {
-  background-image: url(../img/textures/locations.jpg); }
+  background-image: url(../img/bg/locations.jpg); }
   #locations .location {
     position: relative;
     margin-bottom: 16px; }
     #locations .location img {
-      margin-right: 500px; }
+      margin-right: 500px;
+      height: 300px; }
     #locations .location .aside {
       position: absolute;
       width: 500px;
+      height: 300px;
       top: 0;
       bottom: 0;
       right: 0;
       background-color: #1c1c1c;
       color: #cccccc;
-      padding: 15px; }
+      padding: 88px 15px 15px 15px;
+      text-transform: uppercase;
+      color: #cccccc; }
+      #locations .location .aside .left {
+        display: inline-block; }
+        #locations .location .aside .left .top {
+          font-size: 28px;
+          line-height: 12px; }
+        #locations .location .aside .left .bottom {
+          font-size: 64px; }
+        #locations .location .aside .left .address {
+          font-size: 24px; }
+      #locations .location .aside .divider {
+        display: inline-block;
+        border-right: 1px solid #767676;
+        height: 180px;
+        margin: 0 15px; }
+      #locations .location .aside .right {
+        width: 200px;
+        display: inline-block; }
+        #locations .location .aside .right p {
+          font-size: 18px; }
       #locations .location .aside .banner {
         background-color: #cecece;
         position: absolute;

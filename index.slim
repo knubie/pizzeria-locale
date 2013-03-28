@@ -1,4 +1,4 @@
-doctype
+doctype html
 html
   head
     meta charset="utf-8"
@@ -27,7 +27,7 @@ html
           li inspiration
           li about
           li locations
-          li
+          li.social
             img src="img/home/facebook.png" alt="Facebook"
             img src="img/home/twitter.png" alt="Twitter"
 
@@ -221,7 +221,7 @@ html
               | of the frascas they had visited in Italy. Continuing to 
               | explore these Italian traditions and cuisine, they opened 
               | Pizzeria Locale in 2011.
-          img src="img/about/lachlan.jpg" alt="Lachlan Mackinnon-Patterson"
+          .image
         #third
           .aside
             .headline bobby stuckey
@@ -232,19 +232,30 @@ html
               | later he joined world-renowned chef Thomas Keller at The 
               | French Laundry. There he received The James Beard Foundation's 
               | "Outstanding Wine Service" Award and San Francisco 
-          img src="img/about/bobbt.jpg" alt="Bobby Stuckey"
               | Magazine’s recognition as "Wine Director of the Year".
+          .image
     .page#locations
       .container
         .title locations
         .location#denver
-          img src="img/location-denver.jpg" alt="Denver"
+          img src="img/location/denver.jpg" alt="Denver"
           .aside
             .banner Contemporary Neapolitan quick-serve
             .left
+              .top pizzeria locale
+              .bottom denver
+              .address 1234 denver ave,
+              .address denver, co
+            .divider
             .right
+              p phone: (405) 224-4457
+              p hours: m-s / 11am-10pm
+              .map
+                img src="img/location/map.jpg" alt="1234 Denver Ave, Denver, CO"
+                p get directions
+                p view map
         .location#boulder
-          img src="img/location-boulder.jpg" alt="Denver"
+          img src="img/location/boulder.jpg" alt="Denver"
           .aside
             .banner The Original full-service pizza restaurant
             .left

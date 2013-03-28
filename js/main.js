@@ -55,8 +55,10 @@
 
       function Parallax(el) {
         this.el = el;
-        this.el.attr('data-bottom-top', 'background-position: 0% 0%');
-        this.el.attr('data-top-bottom', 'background-position: 0% 200%');
+        this.el.attr('data-bottom-top', 'background-position: 0px 0px');
+        this.el.attr('data-top-bottom', function() {
+          return "background-position: 0px -" + (($(this).height() + $(window).height()) / 2);
+        });
         skrollr.init({
           smoothScrolling: false
         });
@@ -69,7 +71,8 @@
     slides = new Slides($('#slides'));
     nav = new Nav;
     return $(document).scroll(function() {
-      return nav.scroll();
+      nav.scroll();
+      return console.log($(document).scrollTop());
     });
   });
 

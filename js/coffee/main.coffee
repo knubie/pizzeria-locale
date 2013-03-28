@@ -43,8 +43,9 @@ $ ->
   class Parallax
     constructor: (@el) ->
       # Set up parallax
-      @el.attr('data-bottom-top', 'background-position: 0% 0%')
-      @el.attr('data-top-bottom', 'background-position: 0% 200%')
+      @el.attr('data-bottom-top', 'background-position: 0px 0px')
+      @el.attr 'data-top-bottom', ->
+        "background-position: 0px -#{($(this).height() + $(window).height())/2}"
       skrollr.init
         smoothScrolling: false
 
@@ -54,4 +55,5 @@ $ ->
 
   $(document).scroll ->
     nav.scroll()
+    console.log $(document).scrollTop()
 
