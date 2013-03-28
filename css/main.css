@@ -93,7 +93,8 @@ body {
   border-left: 0 solid transparent; }
 
 .page {
-  background-attachment: fixed; }
+  background-attachment: fixed;
+  padding-bottom: 17px; }
   .page .title {
     text-transform: uppercase;
     padding-top: 65px; }
@@ -262,6 +263,7 @@ body {
         #menu .section .right {
           padding: 105px 15px 15px 15px; } }
       #menu .section .right .description {
+        font-family: Georgia;
         color: #505050; }
         @media only screen and (min-width: 1024px) {
           #menu .section .right .description {
@@ -310,6 +312,27 @@ body {
   @media only screen and (-webkit-max-device-pixel-ratio: 1), only screen and (max-device-pixel-ratio: 1) {
     #menu #create-your-own .photo {
       background-image: url(../img/menu/create-your-own.jpg); } }
+  #menu #create-your-own .one .step, #menu #create-your-own .two .step {
+    vertical-align: middle; }
+  #menu #create-your-own .one .step:before, #menu #create-your-own .two .step:before {
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    font-size: 15px;
+    line-height: 22px;
+    margin-right: 12px;
+    -moz-border-radius: 9px;
+    -webkit-border-radius: 9px;
+    border-radius: 9px;
+    -moz-background-clip: padding;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    background-color: #7a7a7a;
+    color: white; }
+  #menu #create-your-own .one .step:before {
+    content: "1"; }
+  #menu #create-your-own .two .step:before {
+    content: "2"; }
   @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-device-pixel-ratio: 2) {
     #menu #drinks .photo {
       background-image: url(../img/menu/drinks@2x.jpg); } }
@@ -435,7 +458,7 @@ body {
   #locations .location {
     position: relative;
     margin-bottom: 16px; }
-    #locations .location img {
+    #locations .location img.photo {
       margin-right: 500px;
       height: 300px; }
     #locations .location .aside {
@@ -468,7 +491,13 @@ body {
         width: 200px;
         display: inline-block; }
         #locations .location .aside .right p {
-          font-size: 18px; }
+          font-size: 18px;
+          line-height: 44px; }
+        #locations .location .aside .right .map {
+          text-align: left; }
+          #locations .location .aside .right .map img {
+            float: left;
+            margin-right: 13px; }
       #locations .location .aside .banner {
         background-color: #cecece;
         position: absolute;

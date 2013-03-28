@@ -88,6 +88,7 @@ body
 
 .page
   background-attachment: fixed
+  padding-bottom: 17px
   .title
     +tablet-landscape-and-above
       font-size: 40px
@@ -97,6 +98,7 @@ body
       font-size: 24px
     text-transform: uppercase
     padding-top: 65px
+
 #home
   background-image: url(../img/bg/home.jpg)
   #logo
@@ -232,6 +234,7 @@ body
       word-spacing: 0px
       //
       .description
+        font-family: Georgia
         +tablet-landscape-and-above
           font-size: 16px
         +mobile-portrait
@@ -278,6 +281,25 @@ body
         background-image: url(../img/menu/create-your-own@2x.jpg)
       +non-retina
         background-image: url(../img/menu/create-your-own.jpg)
+    .one, .two
+      .step
+        vertical-align: middle
+      .step:before
+        display: inline-block
+        width: 18px
+        height: 18px
+        font-size: 15px
+        line-height: 22px
+        margin-right: 12px
+        +border-radius(9px)
+        background-color: #7a7a7a
+        color: #FFF
+    .one
+      .step:before
+        content: "1"
+    .two
+      .step:before
+        content: "2"
   #drinks
     .photo
       +retina
@@ -394,7 +416,7 @@ body
   .location
     position: relative
     margin-bottom: 16px
-    img
+    img.photo
       margin-right: 500px
       height: 300px
     .aside
@@ -428,6 +450,12 @@ body
         display: inline-block
         p
           font-size: 18px
+          line-height: 44px
+        .map
+          text-align: left
+          img
+            float: left
+            margin-right: 13px
       .banner
         background-color: #cecece
         position: absolute
