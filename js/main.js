@@ -70,10 +70,8 @@
     parallax = new Parallax($('.page'));
     slides = new Slides($('#slides'));
     nav = new Nav;
-    return $(document).scroll(function() {
-      nav.scroll();
-      return console.log($(document).scrollTop());
-    });
+    $(document).bind('touchmove', nav.scroll);
+    return $(document).scroll(nav.scroll);
   });
 
 }).call(this);

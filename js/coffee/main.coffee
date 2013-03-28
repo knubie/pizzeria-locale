@@ -53,7 +53,5 @@ $ ->
   slides = new Slides $('#slides')
   nav = new Nav
 
-  $(document).scroll ->
-    nav.scroll()
-    console.log $(document).scrollTop()
-
+  $(document).bind 'touchmove', nav.scroll
+  $(document).scroll nav.scroll
